@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Net</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/job_information.css') }}">
+    <!-- <link rel="stylesheet" href="../static/styles/VPanel.css"> -->
+</head>
+<body>
+    <div id="C1">
+        <br>
+        <label>Employee Net</label>
+        <sub><a href="http://127.0.0.1:5000//vpanel">Go to Dashboard</a></sub>
+        <img src="../static/styles/001-job-search.png" alt="">
+    </div>
+    {% for message in get_flashed_messages() %}
+        <div class="warning">
+            <p>{{ message }}</p>
+        </div>
+    {% endfor %}
+    <form action="http://127.0.0.1:5000//F14A" method="post" id="F1a">
+        <div class="container1">
+            <br>
+            <label for="uname"><b>CNIC #</b></label>
+            <input type="text" placeholder="Enter CNIC Number" name="s_cnic" required autocomplete="off">
+            <label for="uname"><b>Profession</b></label>
+            <select name="s1_profession" id="" required>
+                <option value="" disabled selected>Please choose one</option>
+                <option value="All">All</option>
+                <option value="Carpenter">Carpenter</option>
+                <option value="Electrician">Electrician</option>
+                <option value="Painter">Painter</option>
+                <option value="Plumber">Plumber</option>
+                <option value="Garbageman">Garbageman</option>
+                <option value="Peddler">Peddler</option>
+                <option value="Mechanic">Mechanic</option>
+                <option value="Labor">Labor</option>
+                <option value="Transporter">Transporter</option>
+                <option value="Cleaner">Cleaner</option>
+                <option value="Waiter">Waiter</option>
+                <option value="Call Center Agent">Call Center Agent</option>
+                <option value="Cab Driver">Cab Driver</option>
+                <option value="Nurse">Nurse</option>
+                <option value="Developer">Developer</option>
+                <option value="Teacher">Teacher</option>
+                <option value="Doctor">Doctor</option>
+                <option value="Engineer">Engineer</option>
+                <option value="Lawyer">Lawyer</option>
+                <option value="Public Officer">Public Officer</option>
+            </select>
+            <button type="submit">Search</button>
+        </div>
+    </form>
+    <form action="http://127.0.0.1:5000//F14B" method="post" id="F1">
+        <div class="container2">
+            <div>
+                <br>
+                <label for="uname"><b>Job Category</b></label>
+                <br>
+                <select name="s_job_category" id="" required>
+                    <option value="" disabled selected>Please choose one</option>
+                    <option value="All">All</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Pink">Pink</option>
+                    <option value="White">White</option>
+                </select>
+                <br>
+                <br>
+                <label for="uname"><b>Employment Status</b></label>
+                <br>
+                <select name="s_employment_status" id="" required>
+                    <option value="" disabled selected>Please choose one</option>
+                    <option value="All">All</option>
+                    <option value="employed">Employed</option>
+                    <option value="unemployed">Unemployed</option>
+                </select>
+            </div>
+            <div>
+                <br>
+                <label for="uname"><b>Profession</b></label>
+                <br>
+                <select name="s_profession" id="" required>
+                    <option value="" disabled selected>Please choose one</option>
+                    <option value="All">All</option>
+                    <option value="Carpenter">Carpenter</option>
+                    <option value="Electrician">Electrician</option>
+                    <option value="Painter">Painter</option>
+                    <option value="Plumber">Plumber</option>
+                    <option value="Garbageman">Garbageman</option>
+                    <option value="Peddler">Peddler</option>
+                    <option value="Mechanic">Mechanic</option>
+                    <option value="Labor">Labor</option>
+                    <option value="Transporter">Transporter</option>
+                    <option value="Cleaner">Cleaner</option>
+                    <option value="Waiter">Waiter</option>
+                    <option value="Call Center Agent">Call Center Agent</option>
+                    <option value="Cab Driver">Cab Driver</option>
+                    <option value="Nurse">Nurse</option>
+                    <option value="Developer">Developer</option>
+                    <option value="Teacher">Teacher</option>
+                    <option value="Doctor">Doctor</option>
+                    <option value="Engineer">Engineer</option>
+                    <option value="Lawyer">Lawyer</option>
+                    <option value="Public Officer">Public Officer</option>
+                </select>
+                <br>
+                <br>
+                <label for="uname"><b>Experience</b></label>
+                <br>
+                <input type="text" placeholder="Enter max experience or 0 to avoid" name="s_experience" required autocomplete="off">
+            </div>
+            <div>
+                <br>
+                <label for="uname"><b>District</b></label>
+                <br>
+                <select name="s_district" id="" required>
+                    <option value="" disabled selected>Please choose one</option>
+                    <option value="All">All</option>
+                    <option value="Quetta">Quetta</option>
+                    <option value="Multan">Multan</option>
+                    <option value="Gilgit">Gilgit</option>
+                    <option value="Islamabad">Islamabad</option>
+                    <option value="Faisalabad">Faisalabad</option>
+                    <option value="Muzafarabad">Muzafarabad</option>
+                    <option value="Karachi">Karachi</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Lahore">Lahore</option>
+                    <option value="Peshawar">Peshawar</option>
+                    <option value="Bhawalpur">Bhawalpur</option>
+                    <option value="Sialkot">Sialkot</option>
+                    <option value="Mardan">Mardan</option>
+                    <option value="Rawalpindi">Rawalpindi</option>
+                    <option value="Gujranwala">Gujranwala</option>
+                </select>
+                <br>
+                <br>
+                <label for="uname"><b>Salary or Wage</b></label>
+                <br>
+                <input type="text" placeholder="Enter max salary or 0 to avoid" name="s_salary" required autocomplete="off">
+            </div>
+        </div>
+        <br>
+        <br>
+        <button type="submit">Filter</button>
+    </form>
+    <form action="http://127.0.0.1:5000//F14C" method="post">
+        <div class="Count">
+            <label for="uname"><b>Records Found:  {{count}}</b></label>
+            <label for="uname"><b>Select:</b></label>
+            <input type="text" placeholder="People to give relief" name="s_people_count" required autocomplete="off">
+            <label for="uname"><b>Relief Registration #</b></label>
+            <input type="text" placeholder="Relief registration number" name="s_rr_no" required autocomplete="off">
+            <button type="submit">Give Relief</button>
+        </div>
+    </form>
+    <div class="CC1">
+        <br>
+        <label for="" id="CC3">CNIC</label>
+        <label for="" id="CC4">Name</label>
+        <label for="" id="CC5">Age</label>
+        <label for="" id="CC6">Gender</label>
+        <label for="" id="CC7">District</label>
+    </div>
+    {% for i in range(11) %}
+        <div class="CC2">
+            <input type="text" disabled value="{{data[i][0]}}">
+            <input type="text" disabled value="{{data[i][1]}}">
+            <input type="text" disabled value="{{data[i][2]}}">
+            <input type="text" disabled value="{{data[i][3]}}">
+            <input type="text" disabled value="{{data[i][4]}}">
+        </div>
+    {% endfor %}
+</body>
+</html>

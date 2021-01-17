@@ -1,0 +1,138 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body
+{
+    margin: 0px;
+    background-color: rgb(206, 206, 206);
+}
+.warning
+{
+    height:50px;
+    width: 80%;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: rgb(230, 221, 171);
+    text-align: center;
+    font-size: x-large;
+    padding-top: 1%;
+}
+#C1
+{
+    width: 100%;
+    height: 80px;
+    background-color: rgba(137, 43, 226, 0.822);
+}
+#C1 a
+{
+    color: black;
+}
+#C1 img
+{
+    float: right;
+    margin-top: -10px;
+    margin-right: 20px;
+}
+#C1 label{
+    font-weight: bolder;
+    font-size: xx-large;
+    margin-left: 20px;
+}
+
+#F1{
+    border: 5px solid #ffffff;
+    height:100px;
+    width: 80%;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: white;
+}
+.container1 input[type=text]
+{
+    margin-left: 3%;
+    margin-right: 1%;
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    /* margin-left: 20%; */
+    /* margin-right: 20%; */
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: white;
+}
+.container1 label
+{
+    margin-left: 14%;
+}
+.container1 button
+{
+    background-color: #333333;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 0%;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: large;
+    font-weight: bold;
+}
+
+.CC1 
+{
+    border: 5px solid #ffffff;
+    height:60px;
+    width: 80%;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    background-color: white;   
+}
+.CC1 label
+{
+    font-weight: bolder;
+    font-size: x-large;
+    margin-left: 120px;   
+    padding-top: 30px;
+}
+.CC2
+{
+    border: 5px solid #ffffff;
+    height:60px;
+    width: 80%;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+.CC2 input[type="text"]
+{
+    margin-left: 95px;
+    margin-right: 0px;
+    margin-top: 8px;
+    width: 250px;
+    padding: 12px 20px;
+    /* margin: 8px 0; */
+    /* margin-left: 20%; */
+    /* margin-right: 20%; */
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: white;  
+    /* font-weight: bold; */
+    color: black; 
+    border-color: rgba(137, 43, 226, 0.596);
+}
+.CC2 input[type="text"]:hover
+{
+    border-color: rgb(137, 43, 226);
+}

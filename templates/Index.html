@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Net</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/Index.css') }}">
+</head>
+<body>
+    <div id="C1">
+        <div id="C2" onclick="f1()">
+        </div>
+        <div id="C3" onclick="f2()">
+        </div>
+    </div>
+    <script>
+        function f1()
+        {
+            location.href = "http://127.0.0.1:5000//vpanel";
+        }
+        function f2()
+        {
+            location.href = "http://127.0.0.1:5000//login";
+        }
+    </script>
+</body>
+</html>

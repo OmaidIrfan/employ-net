@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Net</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/ngos_gov.css') }}">
+    <!-- <link rel="stylesheet" href="../static/styles/VPanel.css"> -->
+</head>
+<body>
+    <div id="C1">
+        <br>
+        <label>Employee Net</label>
+        <sub><a href="http://127.0.0.1:5000//vpanel">Go to Dashboard</a></sub>
+        <img src="../static/styles/001-job-search.png" alt="">
+    </div>
+    {% for message in get_flashed_messages() %}
+        <div class="warning">
+            <p>{{ message }}</p>
+        </div>
+    {% endfor %}
+    <form action="http://127.0.0.1:5000//F15" method="post" id="F1">
+        <div class="container1">
+            <br>
+            <label for="uname"><b>Registration Number</b></label>
+            <input type="text" placeholder="Enter Registration Number" name="s_reg_no" required autocomplete="off">
+            <button type="submit">Search</button>
+        </div>
+    </form>
+    <div class="CC1">
+        <br>
+        <label for="">Registration Number</label>
+        <label for="">Organization Name</label>
+        <label for="">Type</label>
+    </div>
+    {% for i in range(11) %}
+        <div class="CC2">
+            <input type="text" disabled value="{{data[i][0]}}">
+            <input type="text" disabled value="{{data[i][1]}}">
+            <input type="text" disabled value="{{data[i][2]}}">
+        </div>
+    {% endfor %}
+    
+
+</body>
+</html>

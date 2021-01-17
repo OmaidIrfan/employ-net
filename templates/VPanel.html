@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Net</title>
+    <!-- <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/VPanel.css') }}"> -->
+    <link rel="stylesheet" href="../static/styles/VPanel.css">
+</head>
+<body>
+    <div id="C1">
+        <br>
+        <label>Employee Net</label>
+        <img src="../static/styles/001-job-search.png" alt="">
+    </div>
+    <div id="C2">
+        <div id="F" onclick="f1()">
+            <p>District Statistics</p>
+        </div>
+        <div id="F" onclick="f2()">
+            <p>Profession Statistics</p>
+        </div>
+        <div id="F" onclick="f3()">
+            <p>Search people by their bio information</p>
+        </div>
+        <div id="F" onclick="f4()">
+            <p>Search people by their job information</p>
+        </div>
+        <div id="F" onclick="f5()">
+            <p>NGOs & Public Organizations</p>
+        </div>
+        <div id="F" onclick="f6()">
+            <p>Reliefs by private & public firms</p>
+        </div>
+        <div id="F" onclick="f7()">
+            <p>Relief's Beneficiaries</p>
+        </div>
+    </div>
+    <script>
+        function f1(){
+            location.href = "http://127.0.0.1:5000//vpanel//district_statistics";
+        }
+        function f2(){
+            location.href = "http://127.0.0.1:5000//vpanel//profession_statistics";
+        }
+        function f3(){
+            location.href = "http://127.0.0.1:5000//vpanel//bio_information";
+        }
+        function f4(){
+            location.href = "http://127.0.0.1:5000//vpanel//job_information";
+        }
+        function f5(){
+            location.href = "http://127.0.0.1:5000//vpanel//ngos_gov";
+        }
+        function f6(){
+            location.href = "http://127.0.0.1:5000//vpanel//ref_pp";
+        }
+        function f7(){
+            location.href = "http://127.0.0.1:5000//vpanel//relief_bene";
+        }
+    </script>
+</body>
+</html>

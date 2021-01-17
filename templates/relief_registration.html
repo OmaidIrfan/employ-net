@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Net</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/relief_registration.css') }}">
+    <!-- <link rel="stylesheet" href="../static/styles/VPanel.css"> -->
+</head>
+<body>
+    <div id="C1">
+        <br>
+        <label>Employee Net</label>
+        <sub><a href="http://127.0.0.1:5000//apanel//t">Go to Dashboard</a></sub>
+        <img src="../static/styles/001-job-search.png" alt="">
+    </div>
+    {% for message in get_flashed_messages() %}
+        <div class="warning">
+            <p>{{ message }}</p>
+        </div>
+    {% endfor %}
+    <div>
+        <form action="http://127.0.0.1:5000//F10" method="post">
+            <div class="container">
+                <div>
+                    <br>
+                    <label for="uname"><b>Relief Registration Number</b></label>
+                    <br>
+                    <input type="text" placeholder="Enter CNIC" name="f_rr_no" required autocomplete="off" disabled value="{{relief_reg.rr_no}}">
+                    <br>
+                    <br>
+                    <label for="uname"><b>Relief Awarding</b></label>
+                    <br>
+                    <input type="text" placeholder="Enter Relief Awarding" name="f_relief_awarded" required autocomplete="off">
+                    <br>
+                    <br>
+                    <label for="uname"><b>Date</b></label>
+                    <br>
+                    <input type="date" placeholder="Enter date" name="f_date" required autocomplete="off">
+                    <br>
+                </div>
+                <div>
+                    <br>
+                    <label for="uname"><b>Organization Registration Number</b></label>
+                    <br>
+                    <input type="text" placeholder="Enter Organization Registration Number" name="f_reg_no" required autocomplete="off">
+                    <br>
+                    <br>
+                    <label for="uname"><b>Total People</b></label>
+                    <br>
+                    <input type="text" placeholder="Enter House Hold Income" name="f_total_people" required autocomplete="off" disabled value="{{relief_reg.total_people}}">
+                    <br>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+    </div>
+
+</body>
+</html>

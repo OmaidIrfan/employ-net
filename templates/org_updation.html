@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Net</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/org_updation.css') }}">
+    <!-- <link rel="stylesheet" href="../static/styles/VPanel.css"> -->
+</head>
+<body>
+    <div id="C1">
+        <br>
+        <label>Employee Net</label>
+        <sub><a href="http://127.0.0.1:5000//apanel//t">Go to Dashboard</a></sub>
+        <img src="../static/styles/001-job-search.png" alt="">
+    </div>
+    {% for message in get_flashed_messages() %}
+        <div class="warning">
+            <p>{{ message }}</p>
+        </div>
+    {% endfor %}
+    <div>
+        <form action="http://127.0.0.1:5000//F08A" method="post" id="F1">
+            <div class="container1">
+                <br>
+                <label for="uname"><b>Registration Number</b></label>
+                <input type="text" placeholder="Enter Registration Number" name="s_reg_no" required autocomplete="off">
+                <button type="submit">Search</button>
+            </div>
+        </form>
+        <form action="http://127.0.0.1:5000//F08B" method="post">
+            <div class="container">
+                <div>
+                    <br>
+                    <label for="uname"><b>Registration Number</b></label>
+                    <br>
+                    <input type="text" name="f_reg_no" required autocomplete="off" value="{{org.reg_no}}" disabled>
+                    <br>
+                </div>
+                <div>
+                    <br>
+                    <label for="uname"><b>Type</b></label>
+                    <br>
+                    <select name="f_type" id="">
+                        <option value="{{org.type}}" selected>{{org.type}}</option>
+                        <option value="Public">Public</option>
+                        <option value="Private">Private</option>
+                    </select>
+                    <br>
+                </div>
+            </div>
+            <label id="OutLable" for="uname"><b>Organization Name</b></label>
+            <br>
+            <input type="text" id="OutInput" placeholder="Enter Organization Name" name="f_org_name" autocomplete="off" required value="{{org.org_name}}">
+            <br>
+            <br>
+            <button type="submit">Update</button>
+          </form>
+    </div>
+
+</body>
+</html>

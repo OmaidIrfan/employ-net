@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Net</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/APanel.css') }}">
+    <link rel="stylesheet" href="../static/styles/APanel.css">
+</head>
+<body>
+    <div id="C1">
+        <br>
+        <label>Employee Net</label>
+        <img src="../static/styles/001-job-search.png" alt="">
+    </div>
+    <div id="C2">
+        <div id="F" onclick="f1()">
+            <p for="">Bio Insertion</p>
+        </div>
+        <div id="F" onclick="f2()">
+            <p for="">Bio Deletion</p>
+        </div>
+        <div id="F" onclick="f3()">
+            <p for="">Bio Updation</p>
+        </div>
+        <div id="F" onclick="f4()">
+            <p for="">Job Insertion</p>
+        </div>
+        <div id="F" onclick="f5()">
+            <p for="">Job Deletion</p>
+        </div>
+        <div id="F" onclick="f6()">
+            <p for="">Job Updation</p>
+        </div>
+        <div id="F" onclick="f7()">
+            <p for="">Organization Registration</p>
+        </div>
+        <div id="F" onclick="f8()">
+            <p for="">Organization Deletion</p>
+        </div>
+        <div id="F" onclick="f9()">
+            <p for="">Organization Updation</p>
+        </div>
+        <div id="F" onclick="f10()">
+            <p for="">Relief Registration</p>
+        </div>
+    </div>
+    <script>
+        function f1(){
+            location.href = "http://127.0.0.1:5000//apanel//bio_insertion";
+        }
+        function f2(){
+            location.href = "http://127.0.0.1:5000//apanel//bio_deletion";
+        }
+        function f3(){
+            location.href = "http://127.0.0.1:5000//apanel//bio_updation";
+        }
+        function f4(){
+            location.href = "http://127.0.0.1:5000//apanel//job_insertion";
+        }
+        function f5(){
+            location.href = "http://127.0.0.1:5000//apanel//job_deletion";
+        }
+        function f6(){
+            location.href = "http://127.0.0.1:5000//apanel//job_updation";
+        }
+        function f7(){
+            location.href = "http://127.0.0.1:5000//apanel//org_registration";
+        }
+        function f8(){
+            location.href = "http://127.0.0.1:5000//apanel//org_deletion";
+        }
+        function f9(){
+            location.href = "http://127.0.0.1:5000//apanel//org_updation";
+        }
+        function f10(){
+            location.href = "http://127.0.0.1:5000//apanel//relief_registration";
+        }
+    </script>
+</body>
+</html>

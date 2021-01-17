@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Net</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/job_insertion.css') }}">
+    <!-- <link rel="stylesheet" href="../static/styles/VPanel.css"> -->
+</head>
+<body>
+    <div id="C1">
+        <br>
+        <label>Employee Net</label>
+        <sub><a href="http://127.0.0.1:5000//apanel//t">Go to Dashboard</a></sub>
+        <img src="../static/styles/001-job-search.png" alt="">
+    </div>
+    {% for message in get_flashed_messages() %}
+        <div class="warning">
+            <p>{{ message }}</p>
+        </div>
+    {% endfor %}
+    <div>
+        <form action="http://127.0.0.1:5000//F04" method="post">
+            <div class="container">
+                <div>
+                    <br>
+                    <label for="uname"><b>CNIC</b></label>
+                    <br>
+                    <input type="text" placeholder="Enter CNIC" name="f_cnic" required autocomplete="off">
+                    <br>
+                    <br>
+                    <label for="uname"><b>Job Category</b></label>
+                    <br>
+                    <select name="f_job_category" id="" required>
+                        <option value="" disabled selected>Please choose one</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Pink">Pink</option>
+                        <option value="White">White</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="uname"><b>Employment Status</b></label>
+                    <br>
+                    <select name="f_employment_status" id="" required>
+                        <option value="" disabled selected>Please choose one</option>
+                        <option value="employed">Employed</option>
+                        <option value="unemployed">Unemployed</option>
+                    </select>
+                    <br>
+                </div>
+                <div>
+                    <br>
+                    <label for="uname"><b>Profession</b></label>
+                    <br>
+                    <select name="f_profession" id="" required>
+                        <option value="" disabled selected>Please choose one</option>
+                        <option value="Carpenter">Carpenter</option>
+                        <option value="Electrician">Electrician</option>
+                        <option value="Painter">Painter</option>
+                        <option value="Plumber">Plumber</option>
+                        <option value="Garbageman">Garbageman</option>
+                        <option value="Peddler">Peddler</option>
+                        <option value="Mechanic">Mechanic</option>
+                        <option value="Labor">Labor</option>
+                        <option value="Transporter">Transporter</option>
+                        <option value="Cleaner">Cleaner</option>
+                        <option value="Waiter">Waiter</option>
+                        <option value="Call Center Agent">Call Center Agent</option>
+                        <option value="Cab Driver">Cab Driver</option>
+                        <option value="Nurse">Nurse</option>
+                        <option value="Developer">Developer</option>
+                        <option value="Teacher">Teacher</option>
+                        <option value="Doctor">Doctor</option>
+                        <option value="Engineer">Engineer</option>
+                        <option value="Lawyer">Lawyer</option>
+                        <option value="Public Officer">Public Officer</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="uname"><b>Experience</b></label>
+                    <br>
+                    <input type="text" placeholder="Enter Experience" name="f_experience" required autocomplete="off">
+                    <br>
+                    <br>
+                    <label for="uname"><b>Salary</b></label>
+                    <br>
+                    <input type="text" placeholder="Enter salary" name="f_salary" required autocomplete="off">
+                    <br>
+                </div>
+            </div>
+            <label id="OutLable" for="uname"><b>Comments</b></label>
+            <br>
+            <input type="text" id="OutInput" placeholder="Any Comments" name="f_comments" autocomplete="off">
+            <br>
+            <br>
+            <button type="submit">Submit</button>
+          </form>
+    </div>
+</body>
+</html>

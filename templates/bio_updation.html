@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Net</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/bio_updation.css') }}">
+    <!-- <link rel="stylesheet" href="../static/styles/bio_updation.css"> -->
+</head>
+<body>
+    <div id="C1">
+        <br>
+        <label>Employee Net</label>
+        <sub><a href="http://127.0.0.1:5000//apanel//t">Go to Dashboard</a></sub>
+        <img src="../static/styles/001-job-search.png" alt="">
+    </div>
+    {% for message in get_flashed_messages() %}
+        <div class="warning">
+            <p>{{ message }}</p>
+        </div>
+    {% endfor %}
+    <div>
+        <form action="http://127.0.0.1:5000//F02A" method="post" id="F1">
+            <div class="container1">
+                <br>
+                <label for="uname"><b>CNIC</b></label>
+                <input type="text" placeholder="Enter cnic" name="s_cnic" required autocomplete="off">
+                <button type="submit">Search</button>
+            </div>
+        </form>
+        <form action="http://127.0.0.1:5000//F02B" method="post">
+            <div class="container">
+                <div>
+                    <br>
+                    <label for="uname"><b>CNIC</b></label>
+                    <br>
+                    <input type="text" placeholder="Enter cnic" name="fu_cnic" required autocomplete="off" value="{{bio.cnic}}" disabled>
+                    <br>
+                    <br>
+                    <label for="uname"><b>Age</b></label>
+                    <br>
+                    <input type="text" placeholder="Enter Age" name="fu_age" required autocomplete="off" value="{{bio.age}}">
+                    <br>
+                    <br>
+                    <label for="uname"><b>Contact Number</b></label>
+                    <br>
+                    <input type="text" placeholder="Enter Contact Number" name="fu_contact_no" required autocomplete="off" value="{{bio.contact_no}}">
+                    <br>
+                    <br>
+                    <label for="uname"><b>Disabled</b></label>
+                    <br>
+                    <select name="fu_disabled" id="">
+                        <option value="{{bio.disabled}}" selected>{{bio.disabled}}</option>
+                        <option value="Intellectual">Intellectual</option>
+                        <option value="Sensory">Sensory</option>
+                        <option value="Mental">Mental</option>
+                        <option value="Physical">Physical</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="uname"><b>Guardian</b></label>
+                    <br>
+                    <select name="fu_guardian" id="">
+                        <option value="{{bio.guardian}}" selected>{{bio.guardian}}</option>
+                        <option value="A">A</option>
+                        <option value="B1">B1</option>
+                        <option value="B2">B2</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="uname"><b>Family Members</b></label>
+                    <br>
+                    <input type="text" placeholder="Enter Family Members" name="fu_family_members" required autocomplete="off" value="{{bio.family_members}}">
+                </div>
+                <div>
+                    <br>
+                    <label for="uname"><b>Full Name</b></label>
+                    <br>
+                    <input type="text" placeholder="Enter Full Name" name="fu_name" required autocomplete="off" value="{{bio.name}}">
+                    <br>
+                    <br>
+                    <label for="uname"><b>Gender</b></label>
+                    <br>
+                    <select name="fu_gender" id="" >
+                        <option value="{{bio.gender}}" selected>{{bio.gender}}</option>
+                        <option value="F">F</option>
+                        <option value="M">M</option>
+                        <option value="T">T</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="uname"><b>District</b></label>
+                    <br>
+                    <select name="fu_district" id="">
+                        <option value="{{bio.district}}" selected>{{bio.district}}</option>
+                        <option value="Quette">Quette</option>
+                        <option value="Multan">Multan</option>
+                        <option value="Gilgit">Gilgit</option>
+                        <option value="Islamabad">Islamabad</option>
+                        <option value="Faisalabad">Faisalabad</option>
+                        <option value="Muzafarabad">Muzafarabad</option>
+                        <option value="Karachi">Karachi</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Lahore">Lahore</option>
+                        <option value="Peshawar">Peshawar</option>
+                        <option value="Bhawalpur">Bhawalpur</option>
+                        <option value="Sialkot">Sialkot</option>
+                        <option value="Mardan">Mardan</option>
+                        <option value="Rawalpindi">Rawalpindi</option>
+                        <option value="Gulranwala">Gulranwala</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="uname"><b>Martial Status</b></label>
+                    <br>
+                    <select name="fu_martial_status" id="">
+                        <option value="{{bio.martial_status}}">{{bio.martial_status}}</option>
+                        <option value="Single">Single</option>
+                        <option value="Married">Married</option>
+                        <option value="Divorced">Divorced</option>
+                        <option value="Widowed">Widowed</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="uname"><b>House Hold Income</b></label>
+                    <br>
+                    <input type="text" placeholder="Enter House Hold Income" name="fu_hhi" required autocomplete="off" value="{{bio.hhi}}">
+                </div>
+            </div>
+            <button type="submit">Update</button>
+          </form>
+    </div>
+</body>
+</html>

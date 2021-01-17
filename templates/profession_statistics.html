@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Net</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/profession_statistics.css') }}">
+    <!-- <link rel="stylesheet" href="../static/styles/VPanel.css"> -->
+</head>
+<body>
+    <div id="C1">
+        <br>
+        <label>Employee Net</label>
+        <sub><a href="http://127.0.0.1:5000//vpanel">Go to Dashboard</a></sub>
+        <img src="../static/styles/001-job-search.png" alt="">
+    </div>
+    {% for message in get_flashed_messages() %}
+        <div class="warning">
+            <p>{{ message }}</p>
+        </div>
+    {% endfor %}
+    <div>
+        <form action="http://127.0.0.1:5000//F12" method="post" id="F1">
+            <div class="container1">
+                <br>
+                <label for="uname"><b>Select District</b></label>
+                <select name="f_district" id="" required>
+                    <option value="" disabled selected>Please choose one</option>
+                    <option value="Quetta">Quetta</option>
+                    <option value="Multan">Multan</option>
+                    <option value="Gilgit">Gilgit</option>
+                    <option value="Islamabad">Islamabad</option>
+                    <option value="Faisalabad">Faisalabad</option>
+                    <option value="Muzafarabad">Muzafarabad</option>
+                    <option value="Karachi">Karachi</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Lahore">Lahore</option>
+                    <option value="Peshawar">Peshawar</option>
+                    <option value="Bhawalpur">Bhawalpur</option>
+                    <option value="Sialkot">Sialkot</option>
+                    <option value="Mardan">Mardan</option>
+                    <option value="Rawalpindi">Rawalpindi</option>
+                    <option value="Gujranwala">Gujranwala</option>
+                </select>
+                <label for="uname"><b>Profession</b></label>
+                <select name="f_profession" id="" required>
+                    <option value="" disabled selected>Please choose one</option>
+                    <option value="Carpenter">Carpenter</option>
+                    <option value="Electrician">Electrician</option>
+                    <option value="Painter">Painter</option>
+                    <option value="Plumber">Plumber</option>
+                    <option value="Garbageman">Garbageman</option>
+                    <option value="Peddler">Peddler</option>
+                    <option value="Mechanic">Mechanic</option>
+                    <option value="Labor">Labor</option>
+                    <option value="Transporter">Transporter</option>
+                    <option value="Cleaner">Cleaner</option>
+                    <option value="Waiter">Waiter</option>
+                    <option value="Call Center Agent">Call Center Agent</option>
+                    <option value="Cab Driver">Cab Driver</option>
+                    <option value="Nurse">Nurse</option>
+                    <option value="Developer">Developer</option>
+                    <option value="Teacher">Teacher</option>
+                    <option value="Doctor">Doctor</option>
+                    <option value="Engineer">Engineer</option>
+                    <option value="Lawyer">Lawyer</option>
+                    <option value="Public Officer">Public Officer</option>
+                </select>
+                <button type="submit">Search</button>
+            </div>
+        </form>
+        <form>
+            <div class="container">
+                <div>
+                    <br>
+                    <label for="uname"><b>District Name</b></label>
+                    <br>
+                    <input type="text" value="{{profession_stats.district}}" disabled>
+                    <br>
+                    <br>
+                    <label for="uname"><b>Employment Number</b></label>
+                    <br>
+                    <input type="text" value="{{profession_stats.employed_no}}" disabled>
+                    <br>
+                    <br>
+                    <label for="uname"><b>Average Salary/Wage</b></label>
+                    <br>
+                    <input type="text" value="{{profession_stats.salary_wage_average}}" disabled>
+                    <br>
+                    <br>
+                    <label for="uname"><b>Profession (percentage)</b></label>
+                    <br>
+                    <input type="text" value="{{profession_stats.profession_percentage}}" disabled>
+                    <br>
+                </div>
+                <div>
+                    <br>
+                    <label for="uname"><b>Profession</b></label>
+                    <br>
+                    <input type="text" value="{{profession_stats.profession}}" disabled>
+                    <br>
+                    <br>
+                    <label for="uname"><b>Employed Number</b></label>
+                    <br>
+                    <input type="text" value="{{profession_stats.unemployed_no}}" disabled>
+                    <br>
+                    <br>
+                    <label for="uname"><b>Average Experience</b></label>
+                    <br>
+                    <input type="text" value="{{profession_stats.experience_average}}" disabled>
+                    <br>
+                </div>
+            </div>
+          </form>
+    </div>
+</body>
+</html>
